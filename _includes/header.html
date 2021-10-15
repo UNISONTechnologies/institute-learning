@@ -1,0 +1,44 @@
+<div
+    class="bg-gradient-to-r from-dark-blue via-light-yellow to-red-orange pb-32"
+>
+    <nav
+        class="
+            bg-gradient-to-r
+            from-dark-blue
+            via-light-yellow
+            to-red-orange
+            text-center
+            lg:text-left
+            w-full
+        "
+    >
+        <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+            <div
+                class="
+                    relative
+                    h-16
+                    flex
+                    items-center
+                    justify-between
+                    lg:border-b lg:border-indigo-400 lg:border-opacity-25
+                "
+            >
+                <div class="px-2 flex items-center lg:px-0">
+                    <a
+                        href="/"
+                        class="flex-shrink-0 text-white text-xl tracking-wide"
+                    >
+                        Education
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-bold text-white mb-2">{{ page.title }}</h1>
+
+            {% include breadcrumbs.html %}
+        </div>
+    </header>
+</div>
