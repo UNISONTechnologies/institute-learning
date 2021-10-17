@@ -8,6 +8,9 @@ collections:
     course:
         output: true
         permalink: /:collection/:name
+    pages:
+        output: true
+        permalink: /:name
 
 defaults:
     - scope:
@@ -23,3 +26,6 @@ exclude:
     - tailwind.config.js
     - postcss.config.js
     - node_modules
+    - README.md
+    - _course/demo-course.md
+    - _posts/2021-10-10-demo.md

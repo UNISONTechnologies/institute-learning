@@ -2,13 +2,29 @@
 layout: default
 ---
 
-<div class="min-h-screen bg-gray-100">
+<div
+    class="
+        min-h-screen
+        bg-gradient-to-r
+        from-dark-gray
+        via-light-gray
+        to-light-yellow
+    "
+>
     {%- include header.html -%}
 
     <main class="-mt-32">
         <div class="max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:px-8">
             <div class="bg-white rounded-lg shadow px-5 py-6 sm:px-6">
-                <div class="min-h-96 rounded-lg p-4">{{ content }}</div>
+                <div
+                    class="
+                        min-h-96
+                        rounded-lg
+                        p-4
+                    "
+                >
+                    {{ content }}
+                </div>
             </div>
         </div>
     </main>

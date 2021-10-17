@@ -1,6 +1,6 @@
 ---
-title: AP Physics 1
-tag: ap-physics-1
+title: Your Course Title
+tag: Your Course ID
 ---
 
 <div class="grid

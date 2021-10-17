@@ -12,7 +12,7 @@ title: Home
 <a href="/course/{{ course.id }}">
     <div class="flex flex-wrap -m-4">
       <div class="p-4">
-        <div class="border border-gray-200 p-6 rounded-lg">
+        <div class="border border-gray-200 p-6 rounded-lg transition duration-300 hover:shadow-lg">
           <h2 class="text-xl font-bold text-gray-900 mb-2">
           {{ course.name }}
           </h2>
@@ -24,4 +24,19 @@ title: Home
       </div>
       </a>
       {% endfor %}
+
+<a href="/contributing">
+    <div class="flex flex-wrap -m-4">
+      <div class="p-4">
+        <div class="border border-gray-200 p-6 rounded-lg transition duration-300 hover:shadow-lg">
+          <h2 class="text-xl font-bold text-gray-900 mb-2">
+          Contributing
+          </h2>
+          <p class="leading-relaxed text-base">
+         Learn how to add courses and notes to Institute
+          </p>
+        </div>
+        </div>
+      </div>
+      </a>
 </div>

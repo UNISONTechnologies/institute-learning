@@ -18,9 +18,9 @@ module.exports = {
         },
         extend: {
             colors: {
-                "dark-blue": "#264653",
-                "light-yellow": "#e9c46a",
-                "red-orange": "#e76f51",
+                "dark-gray": "#222831",
+                "light-gray": "#393E46",
+                "light-yellow": "#FFD369",
             },
             minHeight: {
                 96: "24rem",
@@ -30,5 +30,8 @@ module.exports = {
     variants: {
         extend: {},
     },
-    plugins: [],
+    plugins: [
+        require("@tailwindcss/typography"),
+        require("tailwind-scrollbar"),
+    ],
 };
