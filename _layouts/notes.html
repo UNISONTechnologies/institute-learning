@@ -4,8 +4,37 @@ layout: main
 
 <div class="prose max-w-none leading-snug">{{ content }}</div>
 
+<footer id="answer-footer" class="hidden text-xs">
+    Click "Answer" to toggle the answer's visibility
+</footer>
+
+<script>
+    if (document.getElementsByClassName("toggle-answer").length > 0) {
+        document.getElementById("answer-footer").classList.remove("hidden");
+    }
+
+    Array.from(document.getElementsByClassName("toggle-answer")).forEach(
+        (element) =>
+            element.addEventListener("click", (evt) =>
+                evt.target.parentNode.getElementsByClassName("filter")[0].classList.contains("blur-sm")
+                    ? evt.target.parentNode.getElementsByClassName("filter")[0].classList.remove("blur-sm")
+                    : evt.target.parentNode.getElementsByClassName("filter")[0].classList.add("blur-sm")
+            )
+    );
+</script>
+
 {% if page.latex %}
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+<script type="text/x-mathjax-config">
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ["\\(", "\\)"]],
+        processEscapes: true,
+      }
+    }
+</script>
+
 <script
     id="MathJax-script"
     async

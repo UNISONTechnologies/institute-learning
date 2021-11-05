@@ -3,11 +3,13 @@ title: Your Course Title
 tag: Your Course ID
 ---
 
-<div class="grid
+<div
+    class="grid
             md:grid-cols-3
             sm:grid-cols-1
             grid-flow-row grid-auto-row-dense
-            gap-6">
+            gap-6"
+>
     {% assign posts = site.posts | where: "categories", page.tag | sort: "title" %}
     {% for post in posts %}
     <a href="{{ post.url }}">
@@ -22,7 +24,7 @@ tag: Your Course ID
                     </p>
                 </div>
             </div>
-      </div>
+        </div>
     </a>
     {% endfor %}
 </div>

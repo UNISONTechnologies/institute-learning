@@ -1,6 +1,7 @@
 ---
 layout: notes
 title: "Unit 4: Forces"
+subtitle: "College Board - Unit 2: Dynamics"
 description: >
     A force is a push or pull upon an object resulting from the object's interaction with another object. 
 categories: ap-physics-1
@@ -49,10 +50,10 @@ latex: true
     - If object #1 exerts a force on object #2, then object #2 exerts an equal, but oppositely directed force on object #1
     - Formula: {% raw %} $$ F_{1 \text{ on } 2} = -F_{2 \text{ on } 1} $$ {% endraw %}
 - Internal Forces
-    - Forces which act between objects within a sysem, often holding the system otgeht
+    - Forces which act between objects within a sysem, often holding the system together
     - Internal forces do not contribute to the net force/acceleration of the system
 - External Forces
     - Forces which are applied to a system from the outside
     - External forces do contribute to the net force/acceleration of the system
 - Free Body Diagram
-    - A digaram that includes just one object and the forces acting on it
+    - A diagram that includes just one object and the forces acting on it

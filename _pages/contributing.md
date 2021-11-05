@@ -31,4 +31,4 @@ categories: Your Course ID
 ---
 ```
 
-If you want LaTeX support enabled, add `latex: true` before the last `---`. Then, after adding your front matter, add your content. Institute Learning uses Jekyll, which supports Markdown. So all posts can be written in Markdown or directly in HTML, but Markdown is preferred.
+If you want a subtitle, add `subtitle: Your Subtitle` underneath `title: ...`. If you want LaTeX support enabled, add `latex: true` before the last `---`. Then, after adding your front matter, add your content. Institute Learning's posts can be written in Markdown or directly in HTML, but Markdown is preferred.

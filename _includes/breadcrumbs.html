@@ -44,10 +44,9 @@
                 assign course = site.data.courses | where: "id",
                 page.categories | first %} {% endif %}
                 <a
-                {% if page.path contains "_course" %}
-                {% else %}
+                    {% unless page.path contains "_course" %}
                     href="/course/{{ course.id }}"
-                    {% endif %}
+                    {% endunless %}
                     class="
                         ml-4
                         text-sm
