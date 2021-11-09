@@ -44,6 +44,9 @@ latex: true
 - Holds nucleons/quarks together
 - Extremely short-ranged
 
+## Weak Nuclear Force
+- Mediates one type of quark or lepton turning into another type of quark or lepton
+
 ## Subatomic Particles
 - Protons have three "lumps", which are now known as quarks
   - Six types of quarks

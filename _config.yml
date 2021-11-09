@@ -20,6 +20,9 @@ defaults:
           layout: "course"
 
 # Build settings
+kramdown:
+    smart_quotes: ["apos", "apos", "quot", "quot"]
+
 exclude:
     - package.json
     - package-lock.json
@@ -29,3 +32,4 @@ exclude:
     - README.md
     - _course/demo-course.md
     - _posts/2021-10-10-demo.md
+    - _posts/2021-10-10-unit-6-fundamental-interactions-and-particles-practice.md

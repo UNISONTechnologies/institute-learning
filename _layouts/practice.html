@@ -1,0 +1,90 @@
+---
+layout: main
+---
+
+<div class="prose max-w-none leading-snug">{{ content }}</div>
+
+<script>
+    const problemHeadingElement = document.getElementById("problem");
+    const problemIndex = Number(
+        document.getElementById("problem-index").innerText
+    );
+
+    function shuffle(a) {
+        var j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = a[i];
+            a[i] = a[j];
+            a[j] = x;
+        }
+        return a;
+    }
+
+    const jsonData = JSON.parse(document.getElementById("json-data").innerText);
+    const shuffledJson = shuffle(jsonData);
+
+    let radioValue = 0;
+    let radioElement = null;
+
+    // Load Question
+    problemHeadingElement.innerText = shuffledJson[0].problem
+        .replace("-|", "\\")
+        .replaceAll("|||", "$$");
+
+    Array.from(document.getElementsByName("answer")).forEach((radio) =>
+        radio.addEventListener("click", (evt) => {
+            radioElement = evt.target;
+            radioValue = Number(evt.target.value);
+            document.getElementById("check-button").disabled = false;
+        })
+    );
+
+    document.getElementById("check-button").addEventListener("click", () => {
+        radioElement.classList.remove("disabled:text-gray-500");
+
+        if (jsonData[problemIndex].answers[radioValue].correct) {
+            radioElement.classList.add("disabled:text-green-500");
+            createFeatherElement(
+                "check",
+                "text-green-500",
+                radioElement.parentNode
+            );
+
+            Array.from(document.getElementsByName("answer")).forEach(
+                (radio) => (radio.disabled = true)
+            );
+        } else {
+            radioElement.classList.add("disabled:text-red-500");
+            createFeatherElement("x", "text-red-500", radioElement.parentNode);
+        }
+
+        radioElement.disabled = true;
+        radioElement.parentNode.disabled = true;
+    });
+
+    const createFeatherElement = (featherIconName, color, parentElement) => {
+        const svgns = "http://www.w3.org/2000/svg";
+        const xlinkns = "http://www.w3.org/1999/xlink";
+
+        const svg = document.createElementNS(svgns, "svg");
+        const use = document.createElementNS(svgns, "use");
+
+        svg.classList.add("feather");
+        svg.classList.add("ml-2");
+        svg.classList.add(color);
+
+        use.setAttributeNS(
+            xlinkns,
+            "href",
+            `/assets/icons/feather-sprite.svg#${featherIconName}`
+        );
+
+        svg.appendChild(use);
+        parentElement.appendChild(svg);
+    };
+</script>
+
+{% if page.latex %}
+{% include latex.html %}
+{% endif %}

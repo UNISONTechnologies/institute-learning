@@ -1,0 +1,50 @@
+{
+    "ap-physics-1": {
+        "unit-6-fundamental-interactions-and-particles": [
+            {
+                "type": "select-one",
+                "problem": "What is the force of gravity between two one kilogram masses, spaced one meter apart?",
+                "answers": [
+                    {
+                        "answer": "||| 6.67 -|times 10^{-11} ||| N",
+                        "correct": true
+                    },
+                    {
+                        "answer": "||| 8.988 -|times 10^{9} ||| N",
+                        "correct": false
+                    },
+                    {
+                        "answer": "||| 6.67 -|times 10^{11} ||| N",
+                        "correct": false
+                    },
+                    {
+                        "answer": "||| 6.76 -|times 10^{-11} ||| N",
+                        "correct": false
+                    }
+                ]
+            },
+            {
+                "type": "select-one",
+                "problem": "What is the force between a helium nucleus and one of its electrons, ||| 9.3 -|times 10^{-11} ||| m away?",
+                "answers": [
+                    {
+                        "answer": "||| -5.33 -|times 10^{-8} ||| N",
+                        "correct": true
+                    },
+                    {
+                        "answer": "||| 1.08 -|times 10^{11} ||| N",
+                        "correct": false
+                    },
+                    {
+                        "answer": "||| 5.33 -|times 10^{8} ||| N",
+                        "correct": false
+                    },
+                    {
+                        "answer": "||| -1.08 -|times 10^{-11} ||| N",
+                        "correct": false
+                    }
+                ]
+            }
+        ]
+    }
+}

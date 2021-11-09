@@ -12,6 +12,7 @@ tag: ap-physics-1
 >
     {% assign posts = site.posts | where: "categories", page.tag | sort: "title" %}
     {% for post in posts %}
+    {% unless post.path contains 'practice' %}
     <a href="{{ post.url }}">
         <div class="flex flex-wrap -m-4">
             <div class="p-4">
@@ -29,5 +30,6 @@ tag: ap-physics-1
             </div>
         </div>
     </a>
+    {% endunless %}
     {% endfor %}
 </div>
