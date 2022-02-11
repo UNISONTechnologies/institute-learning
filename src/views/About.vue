@@ -46,7 +46,20 @@
                 </li>
             </ul>
 
-            <p>The Institute website is made in Vue 3, using Tailwind CSS for styling. The resources are made in Markdown with LaTeX.</p>
+            <p>
+                The Institute website is made in Vue 3, using Tailwind CSS for
+                styling. The resources are made in Markdown with LaTeX.
+            </p>
+
+            <p>
+                The logo was made by
+                <a
+                    href="https://twitter.com/josephius3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >J. Quam</a
+                >.
+            </p>
         </div>
     </div>
 </template>
