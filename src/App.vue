@@ -38,7 +38,57 @@ onBeforeMount(async () => {
 
 <template>
     <NavigationBar />
+
     <div class="max-w-5xl mx-auto pt-6 px-8 md:px-0 pb-20">
         <router-view :key="route.query" />
     </div>
+
+    <footer>
+        <div
+            class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8"
+        >
+            <nav
+                class="-mx-5 -my-2 flex flex-wrap justify-center space-x-5"
+                aria-label="Footer"
+            >
+                <div class="py-2">
+                    <router-link
+                        to="/"
+                        class="text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
+                    >
+                        Courses
+                    </router-link>
+                </div>
+
+                <div class="py-2">
+                    <router-link
+                        to="/contribute"
+                        class="text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
+                    >
+                        Contributing
+                    </router-link>
+                </div>
+
+                <div class="py-2">
+                    <router-link
+                        to="/about"
+                        class="text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
+                    >
+                        About
+                    </router-link>
+                </div>
+            </nav>
+
+            <p
+                class="mt-8 text-center text-base text-gray-400 max-w-3xl mx-auto"
+            >
+                Copyright © 2020-{{ new Date().getFullYear() }} UNISON
+                Technologies. All rights reserved. Materials on this site may be
+                used for educational and non-commerical purposes only.
+                Commercial use is not allowed. Using the content on this site to
+                imply or suggest an affiliation with UNISON Technologies,
+                without permission from UNISON Technologies, is not allowed.
+            </p>
+        </div>
+    </footer>
 </template>

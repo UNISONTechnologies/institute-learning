@@ -1,15 +1,19 @@
 <script setup lang="ts">
 const props = defineProps<{
     courseId: string;
+    filename?: string;
     name: string;
     description: string;
-    teacher: string;
 }>();
 </script>
 
 <template>
     <router-link
-        :to="`/course/${props.courseId}`"
+        :to="
+            props.filename
+                ? `/course/${props.courseId}/${props.filename}`
+                : `/course/${props.courseId}`
+        "
         class="w-full bg-white dark:bg-gray-900 rounded-lg shadow divide-y divide-gray-200"
     >
         <div class="w-full flex items-center justify-between p-6 space-x-6">
@@ -21,10 +25,6 @@ const props = defineProps<{
                 <p
                     class="mt-2 text-gray-500 dark:text-gray-400 text-sm whitespace-normal break-words"
                     v-text="props.description"
-                />
-                <p
-                    class="mt-2 text-gray-500 dark:text-gray-400 text-sm whitespace-normal break-words"
-                    v-text="`Teacher: ${props.teacher}`"
                 />
             </div>
         </div>

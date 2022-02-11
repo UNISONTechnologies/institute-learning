@@ -6,6 +6,7 @@ import { computed, onBeforeMount, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { useStore } from "../stores/main";
 import { BASE_COURSE_FILE_PATH } from "../constants";
+import { useTitle } from "@vueuse/core";
 
 const route = useRoute();
 const router = useRouter();
@@ -26,6 +27,10 @@ const courseFile = computed(() =>
 if (!course.value || !courseFiles.value || !courseFile.value) {
     router.push({ name: "Courses" });
 }
+
+useTitle(
+    `${courseFile.value?.name} | ${course.value?.name} | Institute Learning`
+);
 
 const md = new MarkdownIt({}).use(MarkdownItTexMath, {
     engine: Katex,
@@ -64,7 +69,7 @@ const content = computed(async () =>
     />
 
     <div
-        class="prose prose-slate dark:prose-invert"
+        class="max-w-none prose prose-slate dark:prose-invert"
         v-html="markdownContent"
         v-if="!loading"
     ></div>
