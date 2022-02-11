@@ -30,7 +30,7 @@ export default defineConfig({
                 { property: "og:description", content: description },
 
                 // Twitter Cards
-                { name: "twitter:card", content: "summary_large_image" },
+                { name: "twitter:card", content: "summary" },
                 { name: "twitter:site", content: "@hkamran80" },
                 { name: "twitter:creator", content: "@hkamran80" },
                 { name: "twitter:title", content: "Institute Learning" },
